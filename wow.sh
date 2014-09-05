@@ -1,4 +1,4 @@
-COMMIT_DATE="2014-10-16"
+COMMIT_DATE="2014-09-06"
 for j in {1..365}
 do
     COMMIT_DATE=$(gdate "--date=$COMMIT_DATE - 1 days" +%Y-%m-%d)
