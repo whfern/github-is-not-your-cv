@@ -14,5 +14,4 @@ do
         git commit -am "watch this" --date=$COMMIT_DATE
     done
     git push
-    rm README.md
 done
