@@ -6,7 +6,7 @@ do
     while [ "$COMMIT_AMOUNT" -le 20 ]
     do
         COMMIT_AMOUNT=$RANDOM
-        let "COMMIT_AMOUNT %= 300"
+        let "COMMIT_AMOUNT %= 1500"
     done
     for i in $(eval echo "{1..$COMMIT_AMOUNT}")
     do
