@@ -12,7 +12,7 @@ do
     do
 	COMMIT_MESSAGE=$(fortune)
         cat /dev/urandom | LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 >> cv
-        git commit -am "watch this" --date=$COMMIT_DATE
+        git commit -am "$COMMIT_MESSAGE" --date=$COMMIT_DATE
     done
     git push
     rm cv
