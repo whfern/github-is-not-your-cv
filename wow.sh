@@ -1,4 +1,4 @@
-COMMIT_DATE="2016-03-01"
+COMMIT_DATE="2016-02-01"
 for j in {1..365}
 do
     COMMIT_DATE=$(gdate "--date=$COMMIT_DATE - 1 days" +%Y-%m-%d)
@@ -10,6 +10,7 @@ do
     done
     for i in $(eval echo "{1..$COMMIT_AMOUNT}")
     do
+	COMMIT_MESSAGE=$(fortune)
         cat /dev/urandom | LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 >> cv
         git commit -am "watch this" --date=$COMMIT_DATE
     done
